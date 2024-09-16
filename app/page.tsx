@@ -6,7 +6,7 @@ import WordRotate from "@/components/magicui/word-rotate";
 import MarqueeComponent from "@/components/magicui/marquee";
 import HyperText from "@/components/magicui/hyper-text";
 import AnimatedGradient from "@/components/magicui/animated-gradient-text";
-import LetterPullup from "@/components/magicui/letter-pullup"; 
+import WordPullup from "@/components/magicui/word-pull-up"; 
 
 function Home() {
   return (
@@ -28,7 +28,7 @@ function Home() {
           className="text-6xl font-bold text-black mb-8"
         />
 
-        <LetterPullup
+        <WordPullup
           words="Join a global movement of free, volunteer-led coding clubs for young people!"
           className="text-2xl text-black mb-8 text-center"
         />
