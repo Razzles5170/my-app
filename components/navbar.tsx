@@ -11,22 +11,22 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-blue-600 text-white py-6 px-10 fixed w-full shadow-lg z-50">
+    <nav className="bg-gray-100 text-black py-6 px-10 fixed w-full shadow-lg z-50">
       <div className="container mx-auto flex flex-col items-center justify-center">
         <div className="hidden md:flex space-x-8 items-center">
-          <Link href="/about" className="hover:text-teal-300 text-lg">
+          <Link href="/about" className="hover:text-black  transition-all duration-300 ease-in-out transform hover:scale-105 text-lg ">
             About
           </Link>
-          <Link href="/get-involved" className="hover:text-teal-300 text-lg">
+          <Link href="/get-involved" className="hover:text-black  transition-all duration-300 ease-in-out transform hover:scale-105 text-lg">
             Get Involved
           </Link>
-          <Link href="/community" className="hover:text-teal-300 text-lg">
+          <Link href="/community" className="hover:text-black transition-all duration-300 ease-in-out transform hover:scale-105 text-lg">
             Community
           </Link>
-          <Link href="/session-resources" className="hover:text-teal-300 text-lg">
+          <Link href="/session-resources" className="hover:text-black  transition-all duration-300 ease-in-out transform hover:scale-105 text-lg">
             Resources
           </Link>
-          <Link href="/help" className="hover:text-teal-300 text-lg">
+          <Link href="/help" className="hover:text-black  transition-all duration-300 ease-in-out transform hover:scale-105 text-lg">
             Help
           </Link>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
   <SparklesButton
   
     text="Join Now"
-    className="ml-3 px-3 py-2 bg-teal-400 text-blue-800 font-semibold rounded-full hover:bg-teal-500 shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+    className="ml-1 px-1 py-1 bg-gray-100 text-black font-semibold hover:bg-gray-100  transition-all duration-300 ease-in-out transform hover:scale-105"
   />
 </Link>
 
@@ -58,19 +58,19 @@ const Navbar = () => {
         {/* Mobile Links */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 flex flex-col items-center">
-            <Link href="/about" className="py-2 hover:bg-blue-500 text-lg w-full text-center">
+            <Link href="/about" className="hover:text-black  transition-all duration-300 ease-in-out transform hover:scale-105 text-lg w-full text-center">
               About
             </Link>
-            <Link href="/get-involved" className="py-2 hover:bg-blue-500 text-lg w-full text-center">
+            <Link href="/get-involved" className="hover:text-black  transition-all duration-300 ease-in-out transform hover:scale-105 text-lg w-full text-center">
               Get Involved
             </Link>
-            <Link href="/community" className="py-2 hover:bg-blue-500 text-lg w-full text-center">
+            <Link href="/community" className="hover:text-black  transition-all duration-300 ease-in-out transform hover:scale-105 text-lg w-full text-center">
               Community
             </Link>
-            <Link href="/session-resources" className="py-2 hover:bg-blue-500 text-lg w-full text-center">
+            <Link href="/session-resources" className="hover:text-black  transition-all duration-300 ease-in-out transform hover:scale-105 text-lg w-full text-center">
               Resources
             </Link>
-            <Link href="/help" className="py-2 hover:bg-blue-500 text-lg w-full text-center">
+            <Link href="/help" className="hover:text-black  transition-all duration-300 ease-in-out transform hover:scale-105 text-lg w-full text-center">
               Help
             </Link>
           </div>
