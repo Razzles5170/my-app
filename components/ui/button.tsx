@@ -1,0 +1,13 @@
+// components/ui/button.tsx
+import React from "react";
+
+export const Button = ({ children, onClick, className }) => {
+  return (
+    <button
+      onClick={onClick}
+      className={`bg-blue-500 text-white px-4 py-2 rounded transition-transform duration-300 ease-in-out hover:scale-105 ${className}`}
+    >
+      {children}
+    </button>
+  );
+};

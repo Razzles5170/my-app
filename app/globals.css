@@ -10,6 +10,7 @@
   font-size: xx-large;
   src: url('../components/fonts/Normal.otf') format('opentype');
 }
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -27,3 +28,22 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+/* Shine animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+

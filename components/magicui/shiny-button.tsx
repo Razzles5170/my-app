@@ -1,33 +1,35 @@
 "use client";
 
 import { motion, type AnimationProps } from "framer-motion";
-
 import { cn } from "@/lib/utils";
 
 const animationProps = {
   initial: { "--x": "100%", scale: 0.8 },
-  animate: { "--x": "-100%", scale: 1 },
+  animate: { "--x": "-100%", scale: 1.2 },
   whileTap: { scale: 0.95 },
   transition: {
     repeat: Infinity,
     repeatType: "loop",
-    repeatDelay: 1,
-    type: "spring",
-    stiffness: 20,
+    repeatDelay: 3,
+    duration: 3,
+    type: "scroll",
+    stiffness: 10,
     damping: 15,
     mass: 2,
     scale: {
-      type: "spring",
-      stiffness: 200,
+      type: "scroll",
+      stiffness: 100,
       damping: 5,
       mass: 0.5,
     },
   },
 } as AnimationProps;
+
 interface ShinyButtonProps {
   text: string;
   className?: string;
 }
+
 const ShinyButton = ({
   text = "shiny-button",
   className,
@@ -36,25 +38,25 @@ const ShinyButton = ({
     <motion.button
       {...animationProps}
       className={cn(
-        "relative rounded-lg px-6 py-2 font-medium backdrop-blur-xl transition-[box-shadow] duration-300 ease-in-out hover:shadow dark:bg-[radial-gradient(circle_at_50%_0%,hsl(var(--primary)/10%)_0%,transparent_60%)] dark:hover:shadow-[0_0_20px_hsl(var(--primary)/10%)]",
+        "relative rounded-lg px-6 py-2 font-medium bg-black text-white border-2 border-transparent transition-all duration-300 ease-in-out hover:border-[linear-gradient(45deg, silver, white)] hover:shadow-lg",
         className,
       )}
     >
       <span
-        className="relative block h-full w-full text-sm uppercase tracking-wide text-[rgb(0,0,0,65%)] dark:font-light dark:text-[rgb(255,255,255,90%)]"
+        className="relative block h-full w-full text-sm uppercase tracking-wide text-white"
         style={{
           maskImage:
-            "linear-gradient(-75deg,hsl(var(--primary)) calc(var(--x) + 20%),transparent calc(var(--x) + 30%),hsl(var(--primary)) calc(var(--x) + 100%))",
+            "linear-gradient(-75deg, hsl(0, 0%, 100%) calc(var(--x) + 20%), transparent calc(var(--x) + 30%), hsl(0, 0%, 100%) calc(var(--x) + 100%))",
         }}
       >
         {text}
       </span>
       <span
         style={{
-          mask: "linear-gradient(rgb(0,0,0), rgb(0,0,0)) content-box,linear-gradient(rgb(0,0,0), rgb(0,0,0))",
+          mask: "linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) content-box, linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255))",
           maskComposite: "exclude",
         }}
-        className="absolute inset-0 z-10 block rounded-[inherit] bg-[linear-gradient(-75deg,hsl(var(--primary)/10%)_calc(var(--x)+20%),hsl(var(--primary)/50%)_calc(var(--x)+25%),hsl(var(--primary)/10%)_calc(var(--x)+100%))] p-px"
+        className="absolute inset-0 z-10 block rounded-[inherit] bg-[linear-gradient(-75deg,hsl(0, 0%, 50%)_calc(var(--x)+20%),hsl(0, 0%, 70%)_calc(var(--x)+25%),hsl(0, 0%, 50%)_calc(var(--x)+100%))] p-px"
       ></span>
     </motion.button>
   );
